@@ -1,0 +1,82 @@
+.container {
+    background-color: #f2f2f2;
+    box-shadow: 5px;
+    width: 1000px;
+}
+
+.header {
+    font-size: 40px;
+    background-image: linear-gradient(to right, #007acc , green);
+    color: white;
+    font-weight: bolder;
+    padding: 25px;
+    text-align: center;
+}
+
+.form-inline {
+    margin: 20px;
+}
+
+.form-control {
+    height: 45px;
+    margin-right: 10px;
+    width: 100%;
+}
+
+.btn {
+    height: 45px;
+    width: 45px;
+    color: white;
+    background-color: green;
+    border-radius: 0px;
+    font-size: 25px;
+}
+
+.left, .right {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.left {
+    font-size: 18px;
+    width: 40%;
+}
+
+.right {
+    width: 59%;
+}
+
+.left span, .left p {
+    display: inline-block;
+}
+
+.left span {    
+    color: gray;
+}
+
+.favorites-container {
+    background-color: #eaf4e8;
+}
+
+.favorites-header {
+    color: green;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.favorited {
+    color: green;
+}
+
+li {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.list-item {
+    margin-bottom: 20px;
+}
+
+.favorites-container {
+    display: none;
+}
