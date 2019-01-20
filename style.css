@@ -13,14 +13,15 @@
     text-align: center;
 }
 
-.form-inline {
+.form-horizontal {
     margin: 20px;
 }
 
 .form-control {
     height: 45px;
     margin-right: 10px;
-    width: 100%;
+    width: 93%;
+    display: inline-block;
 }
 
 .btn {
@@ -48,10 +49,17 @@
 
 .left span, .left p {
     display: inline-block;
+    vertical-align: top;
 }
 
-.left span {    
+.left span {
     color: gray;
+    width: 10%;
+}
+
+.left p {
+    width: 90%;
+    overflow-wrap: break-word;
 }
 
 .favorites-container {
@@ -62,10 +70,6 @@
     color: green;
     font-size: 30px;
     font-weight: bold;
-}
-
-.favorited {
-    color: green;
 }
 
 li {

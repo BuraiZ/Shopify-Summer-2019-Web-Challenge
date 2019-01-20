@@ -12,9 +12,9 @@ $(document).ready(function() {
         trashBin.innerHTML = trashBinText;
 
         var star = document.createElement("span");
-        star.className = "glyphicon glyphicon-star favorited";
+        star.className = "glyphicon glyphicon-star";
         if (isFavorited) star.style.color = "green";
-        star.addEventListener("click", onStarClickHandler);
+        else star.addEventListener("click", onStarClickHandler);
 
         var left = document.createElement("div");
         left.className = "left";
@@ -36,14 +36,15 @@ $(document).ready(function() {
     function search() {        
         clearSearchList();
 
-        var matches = getAllMatches(inputField.value);
-        matches.forEach(match => {
-            var isFavorited = (favoritesData.find(function(element) {
-                return element.firstChild.innerText === match.title;
-            }) != undefined);
-            createListItem(match.title, match.body, isFavorited);            
-        });
-
+        if (inputField.value !== "") {
+            var matches = getAllMatches(inputField.value);
+            matches.forEach(match => {
+                var isFavorited = (favoritesData.find(function(element) {
+                    return element.firstChild.innerText === match.title;
+                }) != undefined);
+                createListItem(match.title, match.body, isFavorited);            
+            });
+        }
     }
 
     function getAllMatches(keyword) {
@@ -109,6 +110,12 @@ $(document).ready(function() {
 
     var inputField = document.getElementsByTagName("input")[0];
     inputField.addEventListener("input", onInputChange);
+    inputField.addEventListener("keyup", function(event) {
+        event.preventDefault();
+        if (event.keyCode === 13) {
+            search();
+        }
+    }); 
 
     var searchButton = document.getElementsByClassName("btn")[0];
     searchButton.addEventListener("click", search);
