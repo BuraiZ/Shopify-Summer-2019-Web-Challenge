@@ -55,6 +55,7 @@
 .left span {
     color: gray;
     width: 10%;
+    cursor: pointer;
 }
 
 .left p {
